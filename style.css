@@ -12,17 +12,11 @@ div {
     justify-content: space-between;
 }
 
-footer {
-    flex-direction: column;
-    justify-content: flex-end;
-
-}
-
 #bottombar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     color: gray;
     background-color: rgb(243, 243, 243);
     height: fit-content;
