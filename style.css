@@ -4,12 +4,12 @@
     font-size: 14px;
 }
 
-body {
+/* body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
+} */
 
 #topbar {
     display: flex;
@@ -23,7 +23,6 @@ ul, li {
     display: flex;
     align-items: center;
     list-style-type: none;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     padding: 1em;
     /* below, corrections to user agent stylesheet */
@@ -34,47 +33,24 @@ ul, li {
     padding-inline-start: 15px;
 }
 
-img, a {
-    display: flex;
-    align-self: center;
-}
-
 .hero {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    min-height: 200px;
-    min-width: 300px;
-    /* margin: auto; */
 }
-
-
-
-#bottombar {
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    justify-content: space-between;
-    align-items: center;
-    color: gray;
-    background-color: rgb(243, 243, 243);
-    height: 40px;
-    width: 100vw;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-}
-
-
-
-
-
-
 
 #logo {
     width: 272px;
     height: 92px;
-    margin: 50px auto 1em;
+    margin: 100px auto 0;
+}
+
+#searchglass, #mic {
+    display: flex;
+    align-self: center;
+    width: 20px;
+    height: 20px;
+    opacity: 50%;
+    padding: 7px;
 }
 
 #searchbar {
@@ -84,11 +60,18 @@ img, a {
     max-width: 600px;
     min-width: 300px;
     height: 20px;
-    margin: 50px auto 1em;
+    margin: 2em auto 1em;
     padding: 0.75em;
-    border: 1px solid lightgray;
+    border: 1px solid #F2F2F2;
     border-spacing: 5px;
     border-radius: 20px;
+}
+
+input {
+    border: none;
+    width: 500px;
+    min-width: 300px;
+    height: 20px;
 }
 
 #buttons {
@@ -110,47 +93,32 @@ button {
     /* padding: 10px 20px; */
     border-style: none;
     border-radius: 2px;
-    background-color: rgb(243, 243, 243);
+    background-color: #F2F2F2;
     text-align: center;
     color: rgb(83, 83, 83);
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
-
-
-input {
-    border: none;
-    max-width: 400px;
-    min-width: 300px;
-    height: 20px;
-    margin: 40px;
-}
-
-/* .leftjustify {
-    justify-self: flex-start;
-}
-
-.rightjustify {
-    justify-self: flex-end;
-}
-
-.centerme {
-    display: flex;
-    justify-self: center;
-} */
-
-#searchglass, #mic {
-    width: 20px;
-    height: 20px;
-    opacity: 50%;
-    padding: 7px;
-}
-
 @media screen and (max-width: 480px) {
     #carbonbox {
         order: -1;
     }
+}
+
+#bottombar {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    color: gray;
+    background-color: #F2F2F2;
+    height: 40px;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
 }
 
 textarea:focus, input:focus{
