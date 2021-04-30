@@ -4,13 +4,6 @@
     font-size: 14px;
 }
 
-/* body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-} */
-
 #topbar {
     display: flex;
     flex-direction: row;
@@ -23,10 +16,6 @@
 
 ul {
     display: flex;
-    /* align-items: center;
-    list-style-type: none;
-    font-size: 14px;
-    padding: 1em; */
     /* below, corrections to user agent stylesheet */
     margin-block-start: 0em;
     margin-block-end: 0em;
@@ -121,25 +110,33 @@ button {
     -moz-appearance: none;
 }
 
-@media screen and (max-width: 480px) {
-    #carbonbox {
-        order: -1;
-    }
+#bottombar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 40px;
+    width: 100vw;
+    background-color: #F2F2F2;
+    color: gray;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
 }
 
-#bottombar {
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    justify-content: space-between;
-    align-items: center;
-    color: gray;
-    background-color: #F2F2F2;
-    height: 40px;
-    width: 100vw;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+#leftbottom {
+    grid-column-start: 1;
+    justify-self: start;
+}
+
+#centerbottom {
+    justify-self: center;
+    align-self: center;
+}
+
+#rightbottom{
+    grid-column-start: 3;
+    justify-self: end;
+    padding: 10px;
 }
 
 textarea:focus, input:focus{
